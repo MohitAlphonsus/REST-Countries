@@ -11,3 +11,12 @@
 html {
 	font-size: 62.5%;
 }
+
+body {
+	height: 100%;
+}
+
+.grid-country-container {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(25rem, 1fr));
+}
