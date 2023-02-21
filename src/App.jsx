@@ -4,15 +4,16 @@ import Header from './components/Header';
 
 function App() {
 	const [toggleDarkMode, IsToggleDarkMode] = useState(false);
-	console.log(toggleDarkMode);
 
 	return (
-		<div className={toggleDarkMode ? 'dark' : ''}>
-			<Header
-				toggleDarkMode={toggleDarkMode}
-				IsToggleDarkMode={IsToggleDarkMode}
-			/>
-			<Countries />
+		<div className={`${toggleDarkMode ? 'dark' : ''}`}>
+			<div className="bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-50">
+				<Header
+					toggleDarkMode={toggleDarkMode}
+					IsToggleDarkMode={IsToggleDarkMode}
+				/>
+				<Countries />
+			</div>
 		</div>
 	);
 }
